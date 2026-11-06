@@ -1,1 +1,50 @@
-[]
+[
+  {
+    "id": "e1a9c372-5b91-4e4b-97e3-0c4bf4912901",
+    "title": "Blue Hydro Flask Water Bottle",
+    "description": "Left on the 2nd floor library study tables near the window. Has a mountain sticker on the front.",
+    "type": "lost",
+    "category": "Accessories",
+    "location": "Central Library, 2nd Floor",
+    "contact": "alex.student@campus.edu",
+    "image": "",
+    "status": "open",
+    "createdAt": "2026-11-06T10:30:00.000Z"
+  },
+  {
+    "id": "f2b8d483-6ca2-4f5c-a8f4-1d5ce5a23a12",
+    "title": "Black Sony Wireless Headphones",
+    "description": "Found a pair of black over-ear headphones on a bench outside Block B auditorium.",
+    "type": "found",
+    "category": "Electronics",
+    "location": "Block B Courtyard",
+    "contact": "security-desk@campus.edu",
+    "image": "",
+    "status": "open",
+    "createdAt": "2026-11-06T14:15:00.000Z"
+  },
+  {
+    "id": "a3c7e594-7db3-4a6d-b905-2e6df6b34b23",
+    "title": "Set of Dorm Keys with Blue Lanyard",
+    "description": "Lost my room keys attached to a blue university lanyard with two silver keys.",
+    "type": "lost",
+    "category": "Keys",
+    "location": "Dining Hall / Cafeteria",
+    "contact": "room302@campus.edu",
+    "image": "",
+    "status": "open",
+    "createdAt": "2026-11-06T16:45:00.000Z"
+  },
+  {
+    "id": "3992ee2a-d4c8-4770-bfa8-b92df7dd6bee",
+    "title": "Test Umbrella",
+    "description": "Black umbrella left at gym entrance",
+    "type": "found",
+    "category": "Accessories",
+    "location": "Gym",
+    "contact": "",
+    "image": "",
+    "status": "open",
+    "createdAt": "2026-11-06T20:34:39.042Z"
+  }
+]

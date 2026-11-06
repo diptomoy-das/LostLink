@@ -1,7 +1,16 @@
 import { useEffect, useState } from "react";
 
-const API = "http://localhost:5000/api";
+const API = import.meta.env.VITE_API_URL || "/api";
 const emptyForm = { title:"", description:"", type:"lost", category:"Other", location:"", contact:"" };
+
+function getItemImageUrl(image) {
+  if (!image) return "";
+  if (image.startsWith("data:") || image.startsWith("http://") || image.startsWith("https://")) {
+    return image;
+  }
+  const apiBase = (import.meta.env.VITE_API_URL || "").replace(/\/api\/?$/, "");
+  return `${apiBase}${image}`;
+}
 
 function App() {
   const [items, setItems] = useState([]);
@@ -21,7 +30,7 @@ function App() {
       const response = await fetch(`${API}/items?${params}`);
       if (!response.ok) throw new Error("Could not load items");
       setItems(await response.json());
-    } catch { setMessage("Cannot connect to the backend. Start the server in the VS Code terminal."); }
+    } catch { setMessage("Could not load items from the server. Please check your connection."); }
   }
   useEffect(() => { loadItems(); }, [filter, query]);
 
@@ -93,7 +102,7 @@ function App() {
         </div>
         <div className="cards">
           {items.map(item=><article className="itemCard" key={item.id}>
-            {item.image ? <img className="itemImage" src={`http://localhost:5000${item.image}`} alt={item.title}/> : <div className="imagePlaceholder">📦</div>}
+            {item.image ? <img className="itemImage" src={getItemImageUrl(item.image)} alt={item.title}/> : <div className="imagePlaceholder">📦</div>}
             <div className="itemBody">
               <div className="cardTop"><span className={`tag ${item.type}`}>{item.type}</span><span className="date">{new Date(item.createdAt).toLocaleDateString()}</span></div>
               <h3>{item.title}</h3><p>{item.description}</p>

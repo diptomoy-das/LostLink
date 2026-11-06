@@ -4,3 +4,6 @@ node_modules/
 __pycache__/
 server/uploads/*
 !server/uploads/.gitkeep
+.vercel
+dist/
+client/dist/
