@@ -88,7 +88,7 @@ function App() {
           <label>Campus location<input name="location" value={form.location} onChange={updateForm} required placeholder="e.g. Library, Block B"/></label>
           <label className="wide">Description<textarea name="description" value={form.description} onChange={updateForm} required rows="3" placeholder="Describe the item, colour, brand, and when it was lost or found."/></label>
           <label>Contact information<input name="contact" value={form.contact} onChange={updateForm} placeholder="Email or phone (optional)"/></label>
-          <label>Item photo<input type="file" accept="image/*" onChange={e=>setImage(e.target.files[0] || null)}/><small>Optional; maximum 5 MB.</small></label>
+          <label>Item photo<input type="file" accept="image/*" onChange={e=>setImage(e.target.files[0] || null)}/><small>Optional; maximum 4 MB.</small></label>
           <button className="primary wide" disabled={busy}>{busy ? "Submitting..." : "Submit report"}</button>
         </form>
         {message && <p className="notice">{message}</p>}
