@@ -1,0 +1,5 @@
+fastapi>=0.110
+uvicorn[standard]>=0.27
+sentence-transformers>=2.6
+pillow>=10
+numpy>=1.26
